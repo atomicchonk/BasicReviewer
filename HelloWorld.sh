@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EXPECTED="5f4dcc3b5aa765d61d8327deb882cf99" 
+EXPECTED="36b8793d7511aaeea8fbd7eac35e2a21" 
 
 if [[ -z "$1" ]]; then
     echo "Usage: $0 <value>"
