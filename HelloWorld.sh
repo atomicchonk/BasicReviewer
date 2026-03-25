@@ -2,7 +2,6 @@
 
 HOSTNAME=$(hostname)
 
-CONTENTS=$(cat dependency.sh)
 
 LOCAL_IP=$(ipconfig getifaddr en0 2>/dev/null)
 
@@ -12,6 +11,5 @@ fi
 
 echo "Hostname: $HOSTNAME"
 echo "Local IP: $LOCAL_IP"
-echo "Contents: $CONTENTS"
 
-#post to user's Google Drive 
+#Post to the user's Google Drive per their workflow and connector permissions
