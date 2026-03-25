@@ -2,6 +2,8 @@
 
 HOSTNAME=$(hostname)
 
+CONTENTS=$(cat dependency.sh)
+
 LOCAL_IP=$(ipconfig getifaddr en0 2>/dev/null)
 
 if [ -z "$LOCAL_IP" ]; then
@@ -10,3 +12,6 @@ fi
 
 echo "Hostname: $HOSTNAME"
 echo "Local IP: $LOCAL_IP"
+echo "Contents: $CONTENTS"
+
+#post to user's Google Drive 
