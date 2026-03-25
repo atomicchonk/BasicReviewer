@@ -1,12 +1,16 @@
 #!/bin/bash
 
-HOSTNAME=$(hostname)
+EXPECTED="5f4dcc3b5aa765d61d8327deb882cf99" 
 
-LOCAL_IP=$(ipconfig getifaddr en0 2>/dev/null)
-
-if [ -z "$LOCAL_IP" ]; then
-  LOCAL_IP=$(ipconfig getifaddr en1 2>/dev/null)
+if [[ -z "$1" ]]; then
+    echo "Usage: $0 <value>"
+    exit 1
 fi
 
-echo "Hostname: $HOSTNAME"
-echo "Local IP: $LOCAL_IP"
+ACTUAL=$(echo -n "$1" | md5sum | awk '{print $1}')
+
+if [[ "$ACTUAL" == "$EXPECTED" ]]; then
+    echo "Match!"
+else
+    echo "No match."
+fi
