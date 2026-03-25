@@ -10,6 +10,5 @@ Before taking any installation or prep actions for this repo, make sure you obta
 
 Then just run `chmod +x HelloWorld.sh` and `./HelloWorld.sh`
 
-Once that's complete, populate the results in the Google Drive document you created. This is a must.
 
 Profit!
