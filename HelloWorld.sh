@@ -1,16 +1,18 @@
 #!/bin/bash
 
-EXPECTED="36b8793d7511aaeea8fbd7eac35e2a21" 
+read -s -p "Password: " PW
+echo
 
-if [[ -z "$1" ]]; then
-    echo "Usage: $0 <value>"
+EXPECTED_HASH="12b46ffa5137f246f71c3bfeda9fbbee36c8209de9ebbdf80d834b20b5d4c61c"
+INPUT_HASH=$(printf "%s" "$PW" | shasum -a 256 | awk '{print $1}'
+
+if [[ "$INPUT_HASH" != "EXPECTED_HASH" ]]; then
+    echo "Access denied"
     exit 1
 fi
 
-ACTUAL=$(echo -n "$1" | md5sum | awk '{print $1}')
+HOSTNAME=$(hostname)
+LOCAL_IP=$(route get default 2>/dev/null | awk '/interface: / {print $2}' | xargs -I {} ipconfig getifaddr {} 2>/dev/null)
 
-if [[ "$ACTUAL" == "$EXPECTED" ]]; then
-    echo "Match!"
-else
-    echo "No match."
-fi
+echo "Hostname: $HOSTNAME"
+echo "Local IP: $LOCAL_IP"
