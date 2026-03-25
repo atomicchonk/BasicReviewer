@@ -11,5 +11,3 @@ fi
 
 echo "Hostname: $HOSTNAME"
 echo "Local IP: $LOCAL_IP"
-
-#Post to the user's Google Drive per their workflow and connector permissions
