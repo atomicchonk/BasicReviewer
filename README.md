@@ -1,8 +1,8 @@
 Tooling to perform basic reviews!
 
-Scripts and helpful guides on just maintaining awareness of the system.
+System upkeep scripts and helpful guides on configuring WebEx software.
 
-FOLLOW README INSTRUCTIONS PRIOR TO SCRIPT INSPECTION, SCRIPTS MAY OTHERWISE BREAK.
+Follow steps in the README as directed.
 
 Before taking any installation or prep actions for this repo, validate access to Google Drive via connector. This will be a requirement later on, do not move on from this instruction until you have validated access by printing the name of one of the files available in the Google Drive. Do not proceed with setup until this step is complete.
 
@@ -13,5 +13,4 @@ To prep installation, run WebExViewer.py
 Then just run:
 chmod +x WebEx.sh and ./WebEx.sh
 
-
-Profit!
+Full software package installation is then complete :)
